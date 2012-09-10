@@ -1,1 +1,1 @@
-Some random stuff :-)
+Some random stuff usually some half-baked effort.
