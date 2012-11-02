@@ -31,7 +31,7 @@
 		if (navigator.getUserMedia) {
 			navigator.getUserMedia({audio: true, video: true}, function(stream) {
 				video.src = window.URL.createObjectURL(stream);
-			  }, onFailSoHard);
+			}, function(fail){console.log(fail)});
 			  } else {
 			    video.src = 'http://html5videoformatconverter.com/data/images/happyfit2.mp4'; // fallback.
 		    }
