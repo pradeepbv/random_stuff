@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head>
+<title>Speech</title>
+</head>
+<body>
+	<br><br><br>
+	<h1>Speech Input</h1>
+	<input type="text" x-webkit-speechi width="500px">
+</body>
+</html>
