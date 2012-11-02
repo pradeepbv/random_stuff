@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<title>Video</title>
+</head>
+<body>
+	<br><br><br>
+	<h1>Browser can see you</h1>
+	<video autoplay="autoplay">
+	</video>
+	<script>
+		window.URL = window.URL || window.webkitURL;
+		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+		                          navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+					  var video = document.querySelector('video');
+
+					  if (navigator.getUserMedia) {
+						    navigator.getUserMedia({audio: true, video: true}, function(stream) {
+							        video.src = window.URL.createObjectURL(stream);
+								  }, onFailSoHard);
+								  } else {
+								    video.src = 'http://html5videoformatconverter.com/data/images/happyfit2.mp4'; // fallback.
+							    }
+						    </script>
+						    <!-- shamelessly copied from http://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+</body>
+</html>
