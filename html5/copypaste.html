@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>Speech</title>
+	<style>
+		body {
+			margin:50px 0px; padding:0px;
+			text-align:center;
+			}
+					
+		#Content {
+			width:500px;
+			margin:0px auto;
+			text-align:left;
+			padding:15px;
+			border:1px dashed #333;
+			background-color:#eee;
+		}
+	</style>
+	<script>
+	document.body.onpaste = function(e) {
+	  var items = e.clipboardData.items;
+	    for (var i = 0; i < items.length; ++i) {
+	        if (items[i].kind == 'file' && items[i].type == 'image/png') {
+		      var blob = items[i].getAsFile();
+
+		            var img = document.createElement('img');
+			          img.src = window.URL.createObjectURL(blob);
+
+				        document.body.appendChild(img);
+					    }
+					      }
+				      };
+			      </script>
+</head>
+<body>
+	<div id="content">
+	<br><br><br>
+	<h1>Paste your stuff here....</h1>
+</div>
+</body>
+</html>
