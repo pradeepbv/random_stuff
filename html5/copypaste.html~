@@ -17,6 +17,13 @@
 			background-color:#eee;
 		}
 	</style>
+</head>
+<body>
+	<div id="content">
+	<br><br><br>
+	<h1>Paste your stuff here....</h1>
+</div>
+</body>
 	<script>
 	document.body.onpaste = function(e) {
 		var items = e.clipboardData.items;
@@ -33,11 +40,4 @@
 					      }
 				      };
 			      </script>
-</head>
-<body>
-	<div id="content">
-	<br><br><br>
-	<h1>Paste your stuff here....</h1>
-</div>
-</body>
 </html>
