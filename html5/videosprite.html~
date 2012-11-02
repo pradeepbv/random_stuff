@@ -8,7 +8,7 @@
 			text-align:center;
 		}
 		#Content {
-			width:500px;
+			width:900px;
 			margin:0px auto;
 			text-align:left;
 			padding:15px;
