@@ -1,28 +1,42 @@
 <!doctype html>
 <html>
 <head>
-<title>Video</title>
+	<title>Video</title>
+	<style>
+		body {
+				margin:50px 0px; padding:0px;
+					text-align:center;
+						}
+							
+						#Content {
+								width:500px;
+									margin:0px auto;
+										text-align:left;
+											padding:15px;
+												border:1px dashed #333;
+													background-color:#eee;
+														}
+													</style>
 </head>
 <body>
+	<div id="content">
 	<br><br><br>
 	<h1>Browser can see you</h1>
 	<video autoplay="autoplay">
 	</video>
+	</div>
 	<script>
 		window.URL = window.URL || window.webkitURL;
-		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-		                          navigator.mozGetUserMedia || navigator.msGetUserMedia;
-
-					  var video = document.querySelector('video');
-
-					  if (navigator.getUserMedia) {
-						    navigator.getUserMedia({audio: true, video: true}, function(stream) {
-							        video.src = window.URL.createObjectURL(stream);
-								  }, onFailSoHard);
-								  } else {
-								    video.src = 'http://html5videoformatconverter.com/data/images/happyfit2.mp4'; // fallback.
-							    }
-						    </script>
-						    <!-- shamelessly copied from http://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+		navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+		var video = document.querySelector('video');
+		if (navigator.getUserMedia) {
+			navigator.getUserMedia({audio: true, video: true}, function(stream) {
+				video.src = window.URL.createObjectURL(stream);
+			  }, onFailSoHard);
+			  } else {
+			    video.src = 'http://html5videoformatconverter.com/data/images/happyfit2.mp4'; // fallback.
+		    }
+	</script>
+	<!-- shamelessly copied from http://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
 </body>
 </html>
